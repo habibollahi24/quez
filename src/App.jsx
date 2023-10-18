@@ -157,7 +157,7 @@ function App() {
         </div>
       </form>
       {Object.keys(cart).length !== 0 && (
-        <div className="cart">
+        <div className="cart new-cart">
           <p>name: {cart.name}</p>
           <p>description: {cart.description}</p>
           <p>category: {cart.category}</p>
