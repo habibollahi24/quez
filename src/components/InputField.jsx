@@ -1,5 +1,10 @@
 function InputField() {
-  return <div>InputField</div>;
+  return (
+    <div>
+      <input type="text" />
+      <p>errorr</p>
+    </div>
+  );
 }
 
 export default InputField;
