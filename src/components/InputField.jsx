@@ -2,7 +2,7 @@ function InputField() {
   return (
     <div>
       <input type="text" />
-      <p>errorr</p>
+      <p className="red">errorr</p>
     </div>
   );
 }
