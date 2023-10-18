@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { validation } from "./validation";
 import { toast } from "react-toastify";
 import InputField from "./components/InputField";
+import Cart from "./components/Cart";
 
 function App() {
   const [cart, setCart] = useState({});
@@ -156,15 +157,7 @@ function App() {
           </button>
         </div>
       </form>
-      {Object.keys(cart).length !== 0 && (
-        <div className="cart new-cart">
-          <p>name: {cart.name}</p>
-          <p>description: {cart.description}</p>
-          <p>category: {cart.category}</p>
-          <p>quantity: {cart.quantity}</p>
-          <p>price: {cart.price}</p>
-        </div>
-      )}
+      {Object.keys(cart).length !== 0 && <Cart cart={cart} />}
     </div>
   );
 }
