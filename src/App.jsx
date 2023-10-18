@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { validation } from "./validation";
 import { toast } from "react-toastify";
+import InputField from "./components/InputField";
 
 function App() {
   const [cart, setCart] = useState({});
@@ -82,20 +83,13 @@ function App() {
     <div className="container">
       <h1 style={{ marginBottom: "3rem" }}>New Product</h1>
       <form className="form" onSubmit={submitHandler}>
-        <div>
-          <input
-            className="input"
-            name="name"
-            placeholder="Name"
-            type="text"
-            value={formData.name}
-            onChange={changeHandler}
-            onBlur={blurHandler}
-          />
-          {show.name && errors.nameValid && (
-            <p className="error">{errors.nameValid}</p>
-          )}
-        </div>
+        <InputField
+          blurHandler={blurHandler}
+          changeHandler={changeHandler}
+          formData={formData}
+          errors={errors}
+          show={show}
+        />
         <div>
           <input
             className="input"
