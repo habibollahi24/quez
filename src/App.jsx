@@ -13,7 +13,7 @@ function App() {
   });
   const [errors, setErrors] = useState({});
   const [show, setShow] = useState({});
-  const [statusButton, setStatusButton] = useState("Cancel");
+  const [statusButton, setStatusButton] = useState("Cancell");
 
   useEffect(() => {
     setErrors(validation(formData));
