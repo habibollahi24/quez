@@ -1,3 +1,5 @@
+// import PropTypes from "prop-types";
+
 function Cart({ cart }) {
   return (
     <div className="cart">
@@ -10,8 +12,8 @@ function Cart({ cart }) {
   );
 }
 
-// Cart.prototype = {
-// //   name: PropTypes.string,
-// };
+Cart.propTypes = {
+  cart: {},
+};
 
 export default Cart;
