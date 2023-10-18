@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { validation } from "./validation";
 import { toast } from "react-toastify";
 
@@ -13,8 +13,7 @@ function App() {
   });
   const [errors, setErrors] = useState({});
   const [show, setShow] = useState({});
-
-  const nameRef = useRef(null);
+  const [statusButton, setStatusButton] = useState("Cancel");
 
   useEffect(() => {
     setErrors(validation(formData));
@@ -55,6 +54,7 @@ function App() {
         quantity: false,
         price: false,
       });
+      setStatusButton("Clear");
     } else {
       setShow({
         name: true,
@@ -74,7 +74,7 @@ function App() {
       quantity: "",
       price: "",
     });
-    // setShowCart(false);
+    setCart({});
   };
 
   return (
@@ -90,7 +90,6 @@ function App() {
             value={formData.name}
             onChange={changeHandler}
             onBlur={blurHandler}
-            ref={nameRef}
           />
           {show.name && errors.nameValid && (
             <p className="error">{errors.nameValid}</p>
@@ -160,7 +159,7 @@ function App() {
             Submit
           </button>
           <button className="secondary" type="reset" onClick={resetHandler}>
-            Cancel
+            {statusButton}
           </button>
         </div>
       </form>
