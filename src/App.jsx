@@ -105,13 +105,12 @@ function App() {
             value={formData.description}
             onChange={changeHandler}
             onBlur={blurHandler}
-          />{" "}
+          />
           {show.description && errors.descriptionValid && (
             <p className="error">{errors.descriptionValid}</p>
           )}
         </div>
         <div>
-          {" "}
           <input
             className="input"
             name="category"
@@ -140,7 +139,6 @@ function App() {
           )}
         </div>
         <div>
-          {" "}
           <input
             className="input"
             name="price"
