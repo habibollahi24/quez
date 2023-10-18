@@ -24,7 +24,7 @@ function App() {
   };
 
   const blurHandler = (e) => {
-    setShow({ [e.target.name]: true });
+    setShow({ ...show, [e.target.name]: true });
   };
 
   const submitHandler = (e) => {
@@ -54,7 +54,7 @@ function App() {
         quantity: false,
         price: false,
       });
-      setStatusButton("Clear");
+      setStatusButton("New Product");
     } else {
       setShow({
         name: true,
@@ -75,6 +75,7 @@ function App() {
       price: "",
     });
     setCart({});
+    setStatusButton("Cancel");
   };
 
   return (
