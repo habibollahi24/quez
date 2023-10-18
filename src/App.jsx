@@ -80,7 +80,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1 style={{ marginBottom: "3rem" }}>New Product</h1>
+      <h1 style={{ marginBottom: "3rem" }}>My New Product</h1>
       <form className="form" onSubmit={submitHandler}>
         <div>
           <input
